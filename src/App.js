@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <nav>
+        {/* <nav>
           <button>Log In</button>
-        </nav>
+        </nav> */}
 
         <h1>[TITLE]</h1>
       </header>
