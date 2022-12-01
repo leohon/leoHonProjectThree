@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import app from './firebase.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <nav>
+          <button>Log In</button>
+        </nav>
+
+        <h1>[TITLE]</h1>
       </header>
+
+      <main>
+        <div className="info">
+          <h3>Form</h3>
+          <p>Form info</p>
+        </div>
+
+        <form action="submit">
+          <label htmlFor="">Name</label>
+          <input type="text" required/>
+          
+          <label htmlFor="">Company</label>
+          <input type="text" required/>
+          
+          <label htmlFor="">Email</label>
+          <input type="email" required/>
+
+          <label htmlFor="">Phone Number</label>
+          <input type="tel" />
+
+          <button>Add</button>
+        </form>
+
+        <div>
+          <ul></ul>
+        </div>
+      </main>
+
+      <footer>
+        <p>Created at <a href="https://junocollege.com/">Juno College</a></p>
+      </footer>
     </div>
   );
 }
