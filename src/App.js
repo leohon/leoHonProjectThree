@@ -1,10 +1,10 @@
 import './App.css';
 import app from './firebase'
 import {useState, useEffect} from 'react';
-import {getDatabase, ref, onValue, push} from 'firebase/database';
+import {getDatabase, ref, onValue, push, remove} from 'firebase/database';
 import Header from './Header';
 import Info from './FormInfo';
-import Form from './Form';
+// import Form from './Form';
 import Footer from './Footer';
 
 function App() {
@@ -73,53 +73,55 @@ function App() {
   }
 
   //Use a third handler to remove any unwanted/unneeded contacts
+  const removeContact = function(contactID) {
+    const database = getDatabase(app);
+    const dbRef = ref(database, `/${contactID}`);
 
+    remove(dbRef);
+  }
 
   return (
     <div className="App">
       <Header />
+        
+      <Info />
 
-      <main>
-        <Info />
+      {/* <Form /> */}
+      <form action="submit">
+        <label htmlFor="newName">Name</label>
+        <input type="text" id="newName" onChange={nameInput} value={contactName}/>
+        
+        <label htmlFor="newCo">Company</label>
+        <input type="text" id="newCo" onChange={companyInput} value={contactCompany}/>
+        
+        <label htmlFor="newEmail">Email</label>
+        <input type="email" id="newEmail" onChange={emailInput} value={contactEmail}/>
 
-        {/* <Form /> */}
-        <form action="submit">
-          <label htmlFor="newName">Name</label>
-          <input type="text" id="newName" onChange={nameInput} value={contactName}/>
-          
-          <label htmlFor="newCo">Company</label>
-          <input type="text" id="newCo" onChange={companyInput} value={contactCompany}/>
-          
-          <label htmlFor="newEmail">Email</label>
-          <input type="email" id="newEmail" onChange={emailInput} value={contactEmail}/>
+        <label htmlFor="newPhone">Phone Number</label>
+        <input type="tel" id="newPhone" onChange={phoneInput} value={contactPhone}/>
 
-          <label htmlFor="newPhone">Phone Number</label>
-          <input type="tel" id="newPhone" onChange={phoneInput} value={contactPhone}/>
+        <button onClick={handleSubmit}>Add</button>
+      </form>
 
-          <button onClick={handleSubmit}>Add</button>
-        </form>
-
-        {/* Display the contacts in the book */}
-        <div>
-          <h2>BOOK</h2>
-          <ul>
-            {
-              //Map through the database and display the new contact in a UL sticky note
-              contacts.map(function(person) {
-                return (
-                  <div key={person.key}>
-                    <p>{person.name}</p>
-                    <p>{person.company}</p>
-                    <p>{person.email}</p>
-                    <p>{person.phone}</p>
-                    <p>---</p>
-                  </div>
-                )
-              })
-            }
-          </ul>
-        </div>
-      </main>
+      {/* Display the contacts in the book */}
+      <h2>BOOK</h2>
+      <ul>
+        {
+          //Map through the database and display the new contact in a UL sticky note
+          contacts.map(function(contact) {
+            return (
+              <div key={contact.key}>
+                <p>{contact.name}</p>
+                <p>{contact.company}</p>
+                <p>{contact.email}</p>
+                <p>{contact.phone}</p>
+                <button onClick={function() {removeContact(contact.key)}}>X</button>
+                <p>---</p>
+              </div>
+            )
+          })
+        }
+      </ul>
 
       <Footer />
     </div>
