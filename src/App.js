@@ -2,15 +2,18 @@ import './App.css';
 import app from './firebase'
 import {useState, useEffect} from 'react';
 import {getDatabase, ref, onValue, push} from 'firebase/database';
+import Header from './Header';
+import Info from './FormInfo';
+import Form from './Form';
+import Footer from './Footer';
 
 function App() {
+  // Stateful variables for contacts, name, company, email & phone
   const [contacts, setContacts] = useState([]);
   const [contactName, setcontactName] = useState('');  
   const [contactCompany, setcontactCompany] = useState('');  
   const [contactEmail, setcontactEmail] = useState('');  
   const [contactPhone, setcontactPhone] = useState('');
-
-  //Use a third handler to remove any unwanted/unneeded contacts
 
   // Collect data from database
   useEffect(function() {
@@ -69,24 +72,17 @@ function App() {
     setcontactPhone('');
   }
 
+  //Use a third handler to remove any unwanted/unneeded contacts
+
+
   return (
     <div className="App">
-      <header>
-        {/* <nav>
-          <button>Log In</button>
-        </nav> */}
-
-        <h1>[TITLE]</h1>
-      </header>
+      <Header />
 
       <main>
-        <div className="info">
-          <h3>Form</h3>
-          <p>Form info</p>
-        </div>
+        <Info />
 
-        {/* Create a form to grab user inputs */}
-        {/* Required inputs include: name, company, email. (Phone number optional) */}
+        {/* <Form /> */}
         <form action="submit">
           <label htmlFor="newName">Name</label>
           <input type="text" id="newName" onChange={nameInput} value={contactName}/>
@@ -125,9 +121,7 @@ function App() {
         </div>
       </main>
 
-      <footer>
-        <p>Created at <a href="https://junocollege.com/">Juno College</a></p>
-      </footer>
+      <Footer />
     </div>
   );
 }
