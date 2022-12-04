@@ -89,26 +89,36 @@ function App() {
       <Header />
         
       {/* Form Section */}
-      <Info />
-      {/* <Form /> */}
-      <form action="submit">
-        <label htmlFor="newName">Name</label>
-        <input type="text" id="newName" onChange={nameInput} value={contactName}/>
-        
-        <label htmlFor="newCo">Company</label>
-        <input type="text" id="newCo" onChange={companyInput} value={contactCompany}/>
-        
-        <label htmlFor="newEmail">Email</label>
-        <input type="email" id="newEmail" onChange={emailInput} value={contactEmail}/>
+      <div className="wrapper form">
+        <Info />
+        {/* <Form /> */}
+        <form action="submit">
+          <div className="oneInput">
+            <label htmlFor="newName">Name</label>
+            <input type="text" id="newName" onChange={nameInput} value={contactName} required/>
+          </div>
 
-        <label htmlFor="newPhone">Phone Number</label>
-        <input type="tel" id="newPhone" onChange={phoneInput} value={contactPhone}/>
+          <div className="oneInput">
+            <label htmlFor="newCo">Company</label>
+            <input type="text" id="newCo" onChange={companyInput} value={contactCompany} required/>
+          </div>
 
-        <button onClick={handleSubmit}>Add</button>
-      </form>
+          <div className="oneInput">
+            <label htmlFor="newEmail">Email</label>
+            <input type="email" id="newEmail" onChange={emailInput} value={contactEmail} required/>
+          </div>
+
+          <div className="oneInput">
+            <label htmlFor="newPhone">Phone Number</label>
+            <input type="tel" id="newPhone" onChange={phoneInput} value={contactPhone}/>
+          </div>
+          
+          <button onClick={handleSubmit}>Add</button>
+        </form>
+      </div>
 
       {/* Display the contacts in the book */}
-      <h2>BOOK</h2>
+      <h2>Address Book</h2>
       <ul>
         {
           // Map through the database and display the new contact in a UL sticky note

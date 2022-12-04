@@ -6,11 +6,10 @@ html { box-sizing: border-box;}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/* General */
 html {
-  /* General */
   font-size: 125%;
   background-color: beige;
-  
 }
 
 h1, h2, h3, p {
@@ -18,10 +17,80 @@ h1, h2, h3, p {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
+.wrapper {
+  max-width: 1260px;
+  width: 75%;
+  margin: 0 auto;
 }
 
-footer {
+/* Header */
+h1 {
   text-align: center;
+  padding: 25px 0;
+}
+
+/* Form Section*/
+.form {
+  display: flex;
+  margin: 25px auto;
+}
+
+.info {
+  width: 50%;
+}
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+ol {
+  text-align: justify;
+  padding: 0 100px;
+}
+li {
+  padding: 5px 0;
+  line-height: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.oneInput {
+  margin: 10px 0;
+}
+label {
+  display: inline-block;
+  width: 150px;
+  margin-right: 25px;
+}
+input {
+  background-color: beige;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+button {
+  width: 55%;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: auto;
+}
+
+/* Address Book */
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  margin: 25px 0;
 }
