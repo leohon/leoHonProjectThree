@@ -19,13 +19,13 @@ const Form = function(props) {
         </div>
 
         <div className="oneInput">
-            <label htmlFor="newPhone">Phone Number</label>
+            <label htmlFor="newPhone">Phone #</label>
             <input type="tel" id="newPhone" onChange={props.phoneInput} value={props.contactPhone}/>
         </div>
         
         <button onClick={props.handleSubmit}>Add</button>
 
-        {/* <p>errorMessage</p> */}
+        <p>{props.errorMessage}</p>
     </form>
   )
 }
