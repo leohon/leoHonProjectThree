@@ -118,20 +118,23 @@ function App() {
       </div>
 
       {/* Display the contacts in the book */}
-      <h2>Address Book</h2>
+      <h2>Note-Book</h2>
       <ul>
         {
           // Map through the database and display the new contact in a UL sticky note
           // Key pushed above to be used here
           contacts.map(function(contact) {
             return (
-              <div key={contact.key}>
-                <p>{contact.name}</p>
-                <p>{contact.company}</p>
-                <p>{contact.email}</p>
-                <p>{contact.phone}</p>
-                <button onClick={function() {removeContact(contact.key)}}>X</button>
-                <p>---</p>
+              <div key={contact.key} className="book">
+                <div className="buttonContainer">
+                  <button onClick={function() {removeContact(contact.key)}}>X</button>
+                </div>
+                <div className="textContainer">
+                  <p>N - {contact.name}</p>
+                  <p>C - {contact.company}</p>
+                  <p>E - {contact.email}</p>
+                  <p>P - {contact.phone}</p>
+                </div>
               </div>
             )
           })

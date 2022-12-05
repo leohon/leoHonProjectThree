@@ -12,7 +12,7 @@ html {
   background-color: beige;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, ol, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -27,6 +27,7 @@ h1, h2, h3, p {
 h1 {
   text-align: center;
   padding: 25px 0;
+  font-size: 3rem;
 }
 
 /* Form Section*/
@@ -37,14 +38,16 @@ h1 {
 
 .info {
   width: 50%;
+  border-right: 5px dashed black;
 }
 h3 {
   text-transform: uppercase;
   text-align: center;
+  font-size: 1.5rem;
 }
 ol {
   text-align: justify;
-  padding: 0 100px;
+  padding: 20px 70px;
 }
 li {
   padding: 5px 0;
@@ -54,10 +57,10 @@ li {
 form {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 .oneInput {
-  margin: 10px 0;
+  margin: 10px 0 10px 20px;
 }
 label {
   display: inline-block;
@@ -70,26 +73,59 @@ input {
   border-bottom: 2px solid black;
   text-align: center;
 }
-button {
-  width: 55%;
+form button {
+  width: 50%;
   text-align: center;
   margin-top: 25px;
   margin-left: auto;
+  background-color: turquoise;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.25rem;
 }
 
 /* Address Book */
 h2 {
   text-transform: uppercase;
   text-align: center;
-  margin: 10px 0;
+  margin: 25px 0;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+}
+.book {
+  
+  width: 25%;
+  margin: 30px;
+  box-shadow: 5px 5px 5px black;
+  background-color: orange;
+}
+.book .textContainer {
+  margin-bottom: 36px;
+}
+.book p {
+  padding: 5px 15px;
+}
+.buttonContainer {
+  text-align: right;
+}
+.buttonContainer button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+}
+.buttonContainer button:hover {
+  background-color: black;
+  color: orange;
 }
 
 /* Footer */
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 footer p {
   text-align: center;
   margin: 25px 0;
