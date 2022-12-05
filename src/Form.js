@@ -1,24 +1,33 @@
-// {/* Create a form to grab user inputs */}
-// {/* Required inputs include: name, company, email. (Phone number optional) */}
+// Create a form to grab user inputs
 
-// const Form = function() {
-//   return (
-    // <form action="submit">
-    //   <label htmlFor="newName">Name</label>
-    //   <input type="text" id="newName" onChange={nameInput} value={contactName}/>
-      
-    //   <label htmlFor="newCo">Company</label>
-    //   <input type="text" id="newCo" onChange={companyInput} value={contactCompany}/>
-      
-    //   <label htmlFor="newEmail">Email</label>
-    //   <input type="email" id="newEmail" onChange={emailInput} value={contactEmail}/>
+const Form = function(props) {
+  return (
+    <form >
+        <div className="oneInput">
+            <label htmlFor="newName">Name</label>
+            <input type="text" id="newName" onChange={props.nameInput} value={props.contactName}/>
+        </div>
 
-    //   <label htmlFor="newPhone">Phone Number</label>
-    //   <input type="tel" id="newPhone" onChange={phoneInput} value={contactPhone}/>
+        <div className="oneInput">
+            <label htmlFor="newCo">Company</label>
+            <input type="text" id="newCo" onChange={props.companyInput} value={props.contactCompany}/>
+        </div>
 
-    //   <button onClick={handleSubmit}>Add</button>
-    // </form>
-//   )
-// }
+        <div className="oneInput">
+            <label htmlFor="newEmail">Email</label>
+            <input type="email" id="newEmail" onChange={props.emailInput} value={props.contactEmail}/>
+        </div>
 
-// export default Form;
+        <div className="oneInput">
+            <label htmlFor="newPhone">Phone Number</label>
+            <input type="tel" id="newPhone" onChange={props.phoneInput} value={props.contactPhone}/>
+        </div>
+        
+        <button onClick={props.handleSubmit}>Add</button>
+
+        {/* <p>errorMessage</p> */}
+    </form>
+  )
+}
+
+export default Form;
