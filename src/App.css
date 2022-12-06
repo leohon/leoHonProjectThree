@@ -9,6 +9,7 @@ html { box-sizing: border-box;}
 /* General */
 html {
   font-size: 125%;
+  line-height: 1.5rem;
   background-color: beige;
 }
 
@@ -23,11 +24,22 @@ h1, h2, h3, p, ol, ul, li {
   margin: 0 auto;
 }
 
+h1, h2 {
+  font-family: 'Vollkorn SC';
+}
+h3 {
+  font-family: 'Merienda One';
+}
+li, label, p {
+  font-family: 'Roboto';
+}
+
 /* Header */
 h1 {
   text-align: center;
-  padding: 25px 0;
+  padding: 50px 0;
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 /* Form Section*/
@@ -47,17 +59,16 @@ h3 {
 }
 ol {
   text-align: justify;
-  padding: 20px 70px;
+  padding: 20px 100px;
 }
 li {
   padding: 5px 0;
-  line-height: 1.5rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
   text-align: right;
   margin-top: 20px;
 }
@@ -66,15 +77,17 @@ form {
 }
 label {
   display: inline-block;
-  width: 100px;
+  width: 125px;
   margin-right: 25px;
   text-align: left;
+  font-size: 1.25rem;
 }
 input {
   background-color: beige;
   border: none;
   border-bottom: 2px solid black;
   text-align: center;
+  width: 50%;
 }
 form button {
   width: 50%;
@@ -98,7 +111,8 @@ form p {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  margin: 25px 0;
+  margin-top: 50px;
+  font-size: 2rem;
 }
 ul {
   display: flex;
@@ -107,9 +121,8 @@ ul {
   margin: auto;
 }
 .book {
-  /* calc() */
-  width: 25%;
-  margin: 30px;
+  width: calc(33% - 50px);
+  margin: 25px;
   box-shadow: 5px 5px 5px black;
   background-color: orange;
 }
@@ -117,7 +130,7 @@ ul {
   margin-bottom: 36px;
 }
 .book p {
-  padding: 5px 15px;
+  padding: 5px 25px;
 }
 .buttonContainer {
   text-align: right;
@@ -128,6 +141,7 @@ ul {
   background-color: orange;
   border: none;
   cursor: pointer;
+  font-family: cursive;
 }
 .buttonContainer button:hover {
   background-color: black;
@@ -138,4 +152,21 @@ ul {
 footer p {
   text-align: center;
   margin: 25px 0;
+}
+
+/* Media Queries */
+@media (max-width: 1300px) {
+  
+}
+
+@media (max-width: 1100px) {
+  
+}
+
+@media (max-width: 800px) {
+  
+}
+
+@media (max-width: 500px) {
+  
 }
