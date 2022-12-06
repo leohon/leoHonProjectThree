@@ -129,10 +129,10 @@ function App() {
                   <button onClick={function() {removeContact(contact.key)}}>X</button>
                 </div>
                 <div className="textContainer">
-                  <p>N - {contact.name}</p>
-                  <p>C - {contact.company}</p>
-                  <p>E - {contact.email}</p>
-                  <p>P - {contact.phone}</p>
+                  <p><i class="fa-solid fa-user"></i> - {contact.name}</p>
+                  <p><i class="fa-solid fa-building"></i> - {contact.company}</p>
+                  <p><i class="fa-solid fa-envelope"></i> - {contact.email}</p>
+                  <p><i class="fa-solid fa-phone"></i> - {contact.phone}</p>
                 </div>
               </div>
             )
