@@ -5,7 +5,7 @@ const Header = function() {
         <button>Log In</button>
       </nav> */}
 
-      <h1>[TITLE]</h1>
+      <h1>Networking Notes</h1>
     </header>
   )
 }
