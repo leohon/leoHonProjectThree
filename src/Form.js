@@ -5,17 +5,17 @@ const Form = function(props) {
     <form >
         <div className="oneInput">
             <label htmlFor="newName">Name</label>
-            <input type="text" id="newName" onChange={props.nameInput} value={props.contactName}/>
+            <input type="text" id="newName" onChange={props.nameInput} value={props.contactName} required/>
         </div>
 
         <div className="oneInput">
             <label htmlFor="newCo">Company</label>
-            <input type="text" id="newCo" onChange={props.companyInput} value={props.contactCompany}/>
+            <input type="text" id="newCo" onChange={props.companyInput} value={props.contactCompany} required/>
         </div>
 
         <div className="oneInput">
             <label htmlFor="newEmail">Email</label>
-            <input type="email" id="newEmail" onChange={props.emailInput} value={props.contactEmail}/>
+            <input type="email" id="newEmail" onChange={props.emailInput} value={props.contactEmail} required/>
         </div>
 
         <div className="oneInput">
