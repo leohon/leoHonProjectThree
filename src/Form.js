@@ -2,30 +2,30 @@
 
 const Form = function(props) {
   return (
-    <form >
+    <form>
         <div className="oneInput">
-            <label htmlFor="newName">Name</label>
+            <label htmlFor="newName">Name<span>*</span></label>
             <input 
                 type="text" 
                 id="newName" 
                 onChange={props.nameInput} 
                 value={props.contactName} required
-                />
+            />
         </div>
 
         <div className="oneInput">
-            <label htmlFor="newCo">Company</label>
+            <label htmlFor="newCompany">Company<span>*</span></label>
             <input 
                 type="text" 
-                id="newCo" 
+                id="newCompany" 
                 onChange={props.companyInput} 
                 value={props.contactCompany} 
                 required
-                />
+            />
         </div>
 
         <div className="oneInput">
-            <label htmlFor="newEmail">Email</label>
+            <label htmlFor="newEmail">Email<span>*</span></label>
             <input 
                 type="email" 
                 id="newEmail" 

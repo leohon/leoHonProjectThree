@@ -8,15 +8,17 @@ import Form from './Form';
 import Footer from './Footer';
 
 function App() {
-  // Stateful variables for login, contacts, name, company, email, phone, error handling
+  // Stateful variables for login
   const [login, setLogin] = useState('Log In');
   const [loggedIn, setLoggedIn] = useState(false);
   const [loginMessage, setLoginMessage] = useState('');
+  // Stateful variables for contacts, name, company, email, phone
   const [contacts, setContacts] = useState([]);
   const [contactName, setContactName] = useState('');  
   const [contactCompany, setContactCompany] = useState('');  
   const [contactEmail, setContactEmail] = useState('');  
   const [contactPhone, setContactPhone] = useState('');
+  // Stateful variables for error handling
   const [errorMessage, setErrorMessage] = useState('');
 
   // Login handler
@@ -80,6 +82,7 @@ function App() {
     if (contactName === '' || contactCompany === '' || contactEmail === '') {
       setErrorMessage("Name, Company, and Email REQUIRED")
     }
+    // Process data inputted
     else {
       setErrorMessage('');
 
@@ -121,7 +124,7 @@ function App() {
       />
         
       {/* Form Section */}
-      <div className="wrapper form">
+      <section className="wrapper form">
         <Info />
         <Form 
           nameInput={nameInput}
@@ -135,7 +138,7 @@ function App() {
           handleSubmit={handleSubmit}
           errorMessage={errorMessage}
         />
-      </div>
+      </section>
 
       {/* Display the contacts in the book */}
       <h2>Note-Book</h2>

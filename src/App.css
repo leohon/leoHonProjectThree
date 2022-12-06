@@ -24,6 +24,7 @@ h1, h2, h3, p, ol, ul, li {
   margin: 0 auto;
 }
 
+/* Typography */
 h1, h2, nav button, nav p {
   font-family: 'Vollkorn SC';
 }
@@ -58,11 +59,12 @@ h1 {
 }
 
 /* Form Section*/
-.form {
+section.form {
   display: flex;
   margin: 25px auto;
 }
 
+    /* Info */
 .info {
   width: 50%;
   border-right: 5px dashed black;
@@ -79,7 +81,11 @@ ol {
 li {
   padding: 5px 0;
 }
+span {
+  color: red;
+}
 
+    /* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -141,12 +147,6 @@ ul {
   box-shadow: 5px 5px 5px black;
   background-color: orange;
 }
-.book .textContainer {
-  margin-bottom: 36px;
-}
-.book p {
-  padding: 5px 0 5px 25px;
-}
 .buttonContainer {
   text-align: right;
 }
@@ -161,6 +161,12 @@ ul {
 .buttonContainer button:hover {
   background-color: black;
   color: orange;
+}
+.textContainer {
+  margin-bottom: 36px;
+}
+.textContainer p {
+  padding: 5px 0 5px 25px;
 }
 
 /* Footer */
@@ -234,7 +240,7 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  .form {
+  section.form {
     display: block;
   }
 
