@@ -1,9 +1,10 @@
-const Header = function() {
+const Header = function(props) {
   return (
     <header>
-      {/* <nav>
-        <button>Log In</button>
-      </nav> */}
+      <nav className="wrapper">
+        <p>{props.loginMessage}</p>
+        <button onClick={props.handleLogin}>{props.login}</button>
+      </nav>
 
       <h1>Networking Notes</h1>
     </header>

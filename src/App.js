@@ -8,13 +8,30 @@ import Form from './Form';
 import Footer from './Footer';
 
 function App() {
-  // Stateful variables for contacts, name, company, email, phone, error handling
+  // Stateful variables for login, contacts, name, company, email, phone, error handling
+  const [login, setLogin] = useState('Log In');
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [loginMessage, setLoginMessage] = useState('');
   const [contacts, setContacts] = useState([]);
   const [contactName, setContactName] = useState('');  
   const [contactCompany, setContactCompany] = useState('');  
   const [contactEmail, setContactEmail] = useState('');  
   const [contactPhone, setContactPhone] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  // Login handler
+  const handleLogin = function() {
+    if (!loggedIn) {
+      setLoggedIn(true);
+      setLogin("Log Out");
+      setLoginMessage("Logged In");
+    }
+    else {
+      setLoggedIn(false);
+      setLogin("Log In");
+      setLoginMessage("");
+    }
+  }
 
   // Collect data from database
   useEffect(function() {
@@ -97,7 +114,11 @@ function App() {
   return (
     <div className="App">
       {/* Header */}
-      <Header />
+      <Header 
+        handleLogin={handleLogin} 
+        login={login}
+        loginMessage={loginMessage}
+      />
         
       {/* Form Section */}
       <div className="wrapper form">
@@ -129,10 +150,10 @@ function App() {
                   <button onClick={function() {removeContact(contact.key)}}>X</button>
                 </div>
                 <div className="textContainer">
-                  <p><i class="fa-solid fa-user"></i> - {contact.name}</p>
-                  <p><i class="fa-solid fa-building"></i> - {contact.company}</p>
-                  <p><i class="fa-solid fa-envelope"></i> - {contact.email}</p>
-                  <p><i class="fa-solid fa-phone"></i> - {contact.phone}</p>
+                  <p><i className="fa-solid fa-user"></i> - {contact.name}</p>
+                  <p><i className="fa-solid fa-building"></i> - {contact.company}</p>
+                  <p><i className="fa-solid fa-envelope"></i> - {contact.email}</p>
+                  <p><i className="fa-solid fa-phone"></i> - {contact.phone}</p>
                 </div>
               </div>
             )
