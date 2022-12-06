@@ -24,7 +24,7 @@ h1, h2, h3, p, ol, ul, li {
   margin: 0 auto;
 }
 
-h1, h2 {
+h1, h2, nav button, nav p {
   font-family: 'Vollkorn SC';
 }
 h3 {
@@ -35,6 +35,21 @@ li, label, p {
 }
 
 /* Header */
+nav {
+  display: flex;
+  font-size: 1.25rem;
+}
+nav p {
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: greenyellow;
+}
+nav button {
+  background-color: beige;
+  border: 2px solid black;
+  padding: 5px;
+}
+
 h1 {
   text-align: center;
   padding: 50px 0;
