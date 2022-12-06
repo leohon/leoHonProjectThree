@@ -145,7 +145,7 @@ ul {
   margin-bottom: 36px;
 }
 .book p {
-  padding: 5px 25px;
+  padding: 5px 0 5px 25px;
 }
 .buttonContainer {
   text-align: right;
@@ -171,17 +171,110 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 1300px) {
-  
+  .wrapper {
+    width: 85%;
+  }
+
+  ul {
+    width: 90%;
+  }
 }
 
 @media (max-width: 1100px) {
-  
+  .wrapper {
+    width: 90%;
+  }
+
+  ol {
+    padding: 20px 50px;
+  }
+
+  form {
+    width: 40%;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  .book {
+    width: calc(33% - 30px);
+    margin: 15px;
+  }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+  ol {
+    padding: 20px 25px;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  .book {
+    width: calc(33% - 20px);
+    margin: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 100%;
+  }
+
+  label {
+    width: 100px;
+  }
+
+  .book {
+    width: calc(50% - 50px);
+    margin: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    display: block;
+  }
+
+  .info {
+    width: 100%;
+    border-right: none;
+    border-bottom: 5px dashed black;
+  }
   
+  form {
+    width: 100%;
+    text-align: center;
+  }
+
+  form button {
+    margin: 20px auto;
+  }
+
+  .book {
+    width: calc(50% - 30px);
+    margin: 15px;
+  }
 }
 
 @media (max-width: 500px) {
-  
+  h1 {
+    font-size: 2rem;
+    padding: 25px 0;
+  }
+
+  .oneInput {
+    margin: 10px 0;
+  }
+
+  label {
+    margin: 0;
+  }
+
+  .book {
+    width: 75%;
+    margin: 25px auto;
+  }
 }
