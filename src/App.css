@@ -13,6 +13,12 @@ html {
   background-color: beige;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 h1, h2, h3, p, ol, ul, li {
   margin: 0;
   padding: 0;
@@ -41,19 +47,18 @@ nav {
   font-size: 1.25rem;
 }
 nav p {
-  margin-left: auto;
-  margin-right: 10px;
+  margin: 10px 10px 0 auto;
   background-color: greenyellow;
 }
 nav button {
   background-color: beige;
   border: 2px solid black;
-  padding: 5px;
+  margin-top: 10px;
 }
 
 h1 {
   text-align: center;
-  padding: 50px 0;
+  padding: 25px 0 50px 0;
   font-size: 3rem;
   text-transform: uppercase;
 }
@@ -78,7 +83,7 @@ ol {
   text-align: justify;
   padding: 20px 100px;
 }
-li {
+ol li {
   padding: 5px 0;
 }
 span {
@@ -132,7 +137,7 @@ form p {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 25px;
   font-size: 2rem;
 }
 ul {
@@ -140,12 +145,15 @@ ul {
   flex-wrap: wrap;
   width: 75%;
   margin: auto;
+  justify-content: center;
 }
 .book {
   width: calc(33% - 50px);
   margin: 25px;
   box-shadow: 5px 5px 5px black;
   background-color: orange;
+  max-width: 330px;
+  list-style: none;
 }
 .buttonContainer {
   text-align: right;
@@ -170,12 +178,21 @@ ul {
 }
 
 /* Footer */
+footer {
+  margin-top: auto;
+}
 footer p {
   text-align: center;
   margin: 25px 0;
 }
 
 /* Media Queries */
+@media (max-width: 1550px) {
+  ul {
+    justify-content: left;
+  }
+}
+
 @media (max-width: 1300px) {
   .wrapper {
     width: 85%;
