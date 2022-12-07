@@ -1,38 +1,303 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* General */
+html {
+  font-size: 125%;
+  line-height: 1.5rem;
+  background-color: beige;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+}
+
+h1, h2, h3, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, nav button, nav p {
+  font-family: 'Vollkorn SC';
+}
+h3 {
+  font-family: 'Merienda One';
+}
+li, label, p {
+  font-family: 'Roboto';
+}
+
+/* Header */
+nav {
+  display: flex;
+  font-size: 1.25rem;
+}
+nav p {
+  margin: 10px 10px 0 auto;
+  background-color: greenyellow;
+}
+nav button {
+  background-color: beige;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px 0 50px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+/* Form Section*/
+section.form {
+  display: flex;
+  margin: 25px auto;
+}
+
+    /* Info */
+.info {
+  width: 50%;
+  border-right: 5px dashed black;
+}
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+}
+ol {
+  text-align: justify;
+  padding: 20px 100px;
+}
+ol li {
+  padding: 5px 0;
+}
+span {
+  color: red;
+}
+
+    /* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  text-align: right;
+  margin-top: 20px;
+}
+.oneInput {
+  margin: 10px 0 10px 20px;
+}
+label {
+  display: inline-block;
+  width: 125px;
+  margin-right: 25px;
+  text-align: left;
+  font-size: 1.25rem;
+}
+input {
+  background-color: beige;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  width: 50%;
+}
+form button {
+  width: 50%;
+  text-align: center;
+  margin: 20px 0;
+  margin-left: auto;
+  background-color: turquoise;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+form p {
+  text-align: center;
+  background-color: red;
+  color: beige;
+  margin: 0 15px;
+}
+
+/* Address Book */
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 2rem;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.book {
+  width: calc(33% - 50px);
+  margin: 25px;
+  box-shadow: 5px 5px 5px black;
+  background-color: orange;
+  max-width: 330px;
+  list-style: none;
+}
+.buttonContainer {
+  text-align: right;
+}
+.buttonContainer button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+  font-family: cursive;
+}
+.buttonContainer button:hover {
+  background-color: black;
+  color: orange;
+}
+.textContainer {
+  margin-bottom: 36px;
+}
+.textContainer p {
+  padding: 5px 0 5px 25px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Footer */
+footer {
+  margin-top: auto;
+}
+footer p {
+  text-align: center;
+  margin: 25px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media Queries */
+@media (max-width: 1550px) {
+  ul {
+    justify-content: left;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    width: 85%;
+  }
+
+  ul {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  ol {
+    padding: 20px 50px;
+  }
+
+  form {
+    width: 40%;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  .book {
+    width: calc(33% - 30px);
+    margin: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  ol {
+    padding: 20px 25px;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  .book {
+    width: calc(33% - 20px);
+    margin: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 100%;
+  }
+
+  label {
+    width: 100px;
+  }
+
+  .book {
+    width: calc(50% - 50px);
+    margin: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  section.form {
+    display: block;
+  }
+
+  .info {
+    width: 100%;
+    border-right: none;
+    border-bottom: 5px dashed black;
+  }
+  
+  form {
+    width: 100%;
+    text-align: center;
+  }
+
+  form button {
+    margin: 20px auto;
+  }
+
+  .book {
+    width: calc(50% - 30px);
+    margin: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+    padding: 25px 0;
+  }
+
+  .oneInput {
+    margin: 10px 0;
+  }
+
+  label {
+    margin: 0;
+  }
+
+  .book {
+    width: 75%;
+    margin: 25px auto;
   }
 }
