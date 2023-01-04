@@ -8,8 +8,9 @@ const Form = function(props) {
         <input 
           type="text" 
           id="newName" 
-          onChange={props.nameInput} 
-          value={props.contactName} 
+          onChange={props.handleChange} 
+          value={props.contactProfile.name} 
+          name="name"
           required
         />
       </div>
@@ -19,8 +20,9 @@ const Form = function(props) {
         <input 
           type="text" 
           id="newCompany" 
-          onChange={props.companyInput} 
-          value={props.contactCompany} 
+          onChange={props.handleChange} 
+          value={props.contactProfile.company}
+          name="company" 
           required
         />
       </div>
@@ -30,8 +32,9 @@ const Form = function(props) {
         <input 
           type="email" 
           id="newEmail" 
-          onChange={props.emailInput} 
-          value={props.contactEmail}
+          onChange={props.handleChange} 
+          value={props.contactProfile.email}
+          name="email" 
           required
         />
       </div>
@@ -41,8 +44,9 @@ const Form = function(props) {
         <input 
           type="tel" 
           id="newPhone" 
-          onChange={props.phoneInput} 
-          value={props.contactPhone}
+          onChange={props.handleChange} 
+          value={props.contactProfile.phone}
+          name="phone" 
         />
       </div>
       
