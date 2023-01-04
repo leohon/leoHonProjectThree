@@ -11,8 +11,8 @@ const AddressBook = function(props) {
               <button onClick={function() {props.removeContact(contact.key)}}>X</button>
             </div>
             <div className="textContainer">
-              <p><i className="fa-solid fa-user"></i> - {contact.name}</p>
-              <p><i className="fa-solid fa-building"></i> - {contact.company}</p>
+              <p className="name"><i className="fa-solid fa-user"></i> - {contact.name}</p>
+              <p className="company"><i className="fa-solid fa-building"></i> - {contact.company}</p>
               <p><i className="fa-solid fa-envelope"></i> - {contact.email}</p>
             </div>
           </li>
@@ -25,8 +25,8 @@ const AddressBook = function(props) {
               <button onClick={function() {props.removeContact(contact.key)}}>X</button>
             </div>
             <div className="textContainer">
-              <p><i className="fa-solid fa-user"></i> - {contact.name}</p>
-              <p><i className="fa-solid fa-building"></i> - {contact.company}</p>
+              <p className="name"><i className="fa-solid fa-user"></i> - {contact.name}</p>
+              <p className="company"><i className="fa-solid fa-building"></i> - {contact.company}</p>
               <p><i className="fa-solid fa-envelope"></i> - {contact.email}</p>
               <p><i className="fa-solid fa-phone"></i> - {contact.phone}</p>
             </div>
