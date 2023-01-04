@@ -1,12 +1,12 @@
 import './App.css';
-import app from './firebase'
+import app from './components/firebase'
 import {useState, useEffect} from 'react';
 import {getDatabase, ref, onValue, push, remove} from 'firebase/database';
-import Header from './Header';
-import Info from './FormInfo';
-import Form from './Form';
-import AddressBook from './AddressBook';
-import Footer from './Footer';
+import Header from './components/Header';
+import Info from './components/FormInfo';
+import Form from './components/Form';
+import AddressBook from './components/AddressBook';
+import Footer from './components/Footer';
 
 function App() {
   // Stateful variables for login
