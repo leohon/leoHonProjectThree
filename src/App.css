@@ -115,6 +115,9 @@ input {
   text-align: center;
   width: 50%;
 }
+#newName, #newCompany {
+  text-transform: capitalize;
+}
 form button {
   width: 50%;
   text-align: center;
@@ -175,6 +178,9 @@ ul {
 }
 .textContainer p {
   padding: 5px 0 5px 25px;
+}
+.name, .company {
+  text-transform: capitalize;
 }
 
 /* Footer */
